@@ -2,12 +2,15 @@
 #include <stdlib.h>
 #include <time.h>
 
+int numero() {
+    return rand()%9;
+}
 int main() {
     srand(time(NULL));
     int resposta, num1, num2;
 
     while(resposta!=num1+num2) {
-        num1=rand()%9, num2=rand()%9;
+        num1=numero(), num2=numero();
         printf("%d + %d = ", num1, num2);
         scanf("%d", &resposta);
 
